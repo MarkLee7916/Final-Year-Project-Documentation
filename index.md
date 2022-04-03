@@ -35,3 +35,7 @@ There is a piece of state in the parent component for each enum.
 The current value of that state is passed in to the dropdown component so it knows what is currently selected. The list of strings is passed in by saving an invariant instance variable that is assigned to Object.value(Enum), which enumerates the possible string displays.
 
 ![](./images/dropdown-enum-values.png)
+
+The dropdown menu also takes a callback for notifying the parent component that the item has been updated, and some commentary that displays when an item is hovered over. The image below shows how to put this all together to render a dropdown in the markup side of an Angular component.
+
+![](./images/dropdown-HTML-render.png)
