@@ -6,6 +6,16 @@ Hello! This is the documentation detailing the codebase of this project. For lea
 
 This project implements interactive visualisers for algorithms that solve three broad classes of AI problems – graph search, constraint satisfaction and adversarial search. This tool is designed to help students of AI understand the algorithms better, aiding the learning process. Graph search is visualised through applying it to a 2D grid. Constraint satisfaction is visualised through applying it to the N-Queens problem, which involves placing N queens on a N x N chessboard such that no two queens are attacking each other. Adversarial search visualises the minimax algorithm through an abstract tree diagram similar to what you'd see in a standard AI textbook.
 
+## Building Project
+
+If you just want to view the project, you use the links [pathfinding](https://marklee7916.github.io/AI-Search-Algorithm-Visualisation/public/#/pathfinding), [constraint satisfaction](https://marklee7916.github.io/AI-Search-Algorithm-Visualisation/public/#/n-queens) and [adversarial search](https://marklee7916.github.io/AI-Search-Algorithm-Visualisation/public/#/minimax). The source code can be found [here](https://github.com/MarkLee7916/AI-Search-Algorithm-Visualisation/tree/master). To build this project from scratch, you should have node and the Angular CLI installed. The versions I use can be seen below.
+
+`Angular CLI: 11.2.11`
+
+`Node: 16.14.0`
+
+Once you have these installed, you should run `npm install` to install the dependencies and then `ng serve` to serve up the project on localhost. You can build a production version using `npm run-script build`. The output can be found in the public folder. You can run the tests by running `ng test`.
+
 ## General architecture - Modules
 
 This project uses the Angular module system. Each class of algorithm visualised has its own module and its own page, and there is a module for components that are shared between the other modules.
