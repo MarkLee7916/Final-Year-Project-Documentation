@@ -24,4 +24,14 @@ which would place the component in the newly created modules folder. They would 
 
 ## General architecture - Dropdowns
 
-To made adding new options easy, options for the UI are driven by dropdowns. This also helps keeps the UI consistent, making it easy for the user to find what they need by scanning through the menu. There is a dropdown component in the shared module that takes several arguments. The first argument is a list of strings that correspond to items in the dropdown menu, where each string is the option the user can see. The second argument is the current item being displayed, which should be tied to a piece of state in the parent component. This should also be a member of the list of strings. Here are some screenshots as an example of how this is done.
+To made adding new options easy, options for the UI are driven by dropdowns. This also helps keeps the UI consistent, making it easy for the user to find what they need by scanning through the menu. There is a dropdown component in the shared module that takes several arguments. The first argument is a list of strings that correspond to items in the dropdown menu, where each string is the option the user can see. The second argument is the current item being displayed, which should be tied to a piece of state in the parent component. This should also be a member of the list of strings. For each tool, this is conventionally done by creating an enum for each dropdown menu. These enums are typically contained in their own file, and map onto the strings that will render for the options on the screen.
+
+![](./images/dropdown-item-enums.png)
+
+There is a piece of state in the parent component for each enum.
+
+![](./images/dropdown-enum-states.png)
+
+The current value of that state is passed in to the dropdown component so it knows what is currently selected. The list of strings is passed in by saving an invariant instance variable that is assigned to Object.value(Enum), which enumerates the possible string displays.
+
+![](./images/dropdown-enum-values.png)
